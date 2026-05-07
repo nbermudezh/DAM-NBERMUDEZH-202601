@@ -1,9 +1,25 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { LoginScreen, RegisterScreen } from "./screens";
 
-const Stack = createNativeStackNavigator();
+import {
+  NavigationContainer,
+} from "@react-navigation/native";
+
+import {
+  createNativeStackNavigator,
+} from "@react-navigation/native-stack";
+
+import {
+  LoginScreen,
+  RegisterScreen,
+} from "./screens";
+
+export type AuthStackParamList = {
+  Login: undefined;
+  Register: undefined;
+};
+
+const Stack =
+  createNativeStackNavigator<AuthStackParamList>();
 
 export default function Routes(): React.JSX.Element {
   return (
