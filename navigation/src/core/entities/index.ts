@@ -1,1 +1,2 @@
-export type { User } from "./User.entity";
+export * from "./User.entity";
+export * from "./Product.entity";

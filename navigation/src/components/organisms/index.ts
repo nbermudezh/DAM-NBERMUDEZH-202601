@@ -1,3 +1,4 @@
-export { default as AuthContainer } from "./AuthContainer";
-export { default as LoginForm } from "./LoginForm";
-export { default as RegisterForm } from "./RegisterForm";
+export * from "./LoginForm";
+export * from "./RegisterForm";
+export * from "./RegisterProductForm";
+export * from "./ProductCard";
