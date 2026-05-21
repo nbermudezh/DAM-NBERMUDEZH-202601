@@ -11,11 +11,15 @@ import {
 import {
   LoginScreen,
   RegisterScreen,
+  DashboardScreen,
+  RegisterProductScreen,
 } from "./screens";
 
 export type AuthStackParamList = {
   Login: undefined;
   Register: undefined;
+  Dashboard: undefined;
+  RegisterProduct: undefined;
 };
 
 const Stack =
@@ -37,6 +41,16 @@ export default function Routes(): React.JSX.Element {
         <Stack.Screen
           name="Register"
           component={RegisterScreen}
+        />
+
+        <Stack.Screen
+          name="Dashboard"
+          component={DashboardScreen}
+        />
+
+        <Stack.Screen
+          name="RegisterProduct"
+          component={RegisterProductScreen}
         />
       </Stack.Navigator>
     </NavigationContainer>

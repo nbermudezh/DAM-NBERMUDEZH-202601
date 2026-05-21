@@ -7,9 +7,7 @@ interface Props {
   placeholder: string;
   secureTextEntry?: boolean;
   value?: string;
-  onChangeText?: (
-    text: string
-  ) => void;
+  onChangeText?: (text: string) => void;
 }
 
 export default function Input({
@@ -18,17 +16,13 @@ export default function Input({
   value,
   onChangeText,
 }: Props): React.JSX.Element {
-
   return (
     <TextInput
       style={styles.input}
       placeholder={placeholder}
-      secureTextEntry={
-        secureTextEntry
-      }
+      secureTextEntry={secureTextEntry}
       value={value}
       onChangeText={onChangeText}
     />
   );
-
 }

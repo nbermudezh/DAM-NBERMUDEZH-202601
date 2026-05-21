@@ -26,6 +26,18 @@ export const setupDatabase = async (): Promise<void> => {
       );
     `);
 
+    await db.executeSql(`
+      CREATE TABLE IF NOT EXISTS products (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        nombre TEXT,
+        codigo TEXT,
+        cantidadStock TEXT,
+        costoCompra TEXT,
+        precioVenta TEXT,
+        descripcion TEXT
+      );
+    `);
+
     console.log("Base de datos inicializada");
 
   } catch (error) {
@@ -36,4 +48,5 @@ export const setupDatabase = async (): Promise<void> => {
     );
 
   }
+
 };
