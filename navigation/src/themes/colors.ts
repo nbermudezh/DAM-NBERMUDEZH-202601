@@ -7,3 +7,4 @@ export default {
   lightGray: "#F5F5F5",
   border: "#D9D9D9",
 };
+
